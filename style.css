@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #3f3f3f;
+}
+
+.sortable-list {
+    background: #e7e7e7;
+    width: 445px;
+    border-radius: 6px;
+    padding: 30px 35px 20px;
+}
+
+.sortable-list .item {
+    cursor: move;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    border-radius: 9px;
+    margin-bottom: 11px;
+    padding: 10px 13px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.item .details {
+    display: flex;
+    align-items: center;
+}
+
+.item .details img {
+    width: 43px;
+    height: 43px;
+    margin-right: 12px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.items .details span {
+    font-size: 1.13rem;
+}
+
+.item i {
+    color: #474747;
+    font-size: 1.13rem;
+}
+
+.item.dragging :where(.details, i) {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .sortable-list {
+        cursor: auto;
+    }
+}
