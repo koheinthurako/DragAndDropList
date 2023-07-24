@@ -63,6 +63,7 @@ body {
 
 @media (max-width: 768px) {
     .sortable-list {
+        width: 320px;
         cursor: auto;
     }
 }
